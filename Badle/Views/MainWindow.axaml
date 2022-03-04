@@ -1,0 +1,153 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Badle.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="700"
+        x:Class="Badle.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Badle">
+
+	<Window.Styles>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="LightGray"/>
+			<Setter Property="TextBlock.Foreground" Value="Black"/>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="LightGray"/>
+			<Setter Property="TextBlock.Foreground" Value="Black"/>
+		</Style>
+		<Style Selector="Button.isHere">
+			<Setter Property="Background" Value="LimeGreen"/>
+			<Setter Property="Foreground" Value="WhiteSmoke"/>
+		</Style>
+		<Style Selector="Button.contains">
+			<Setter Property="Background" Value="Orange"/>
+			<Setter Property="Foreground" Value="WhiteSmoke"/>
+		</Style>
+		<Style Selector="Button:pointerover.contains /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="Orange"/>
+			<Setter Property="TextBlock.Foreground" Value="WhiteSmoke"/>
+		</Style>
+		<Style Selector="Button:pointerover.isHere /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="LimeGreen"/>
+			<Setter Property="TextBlock.Foreground" Value="WhiteSmoke"/>
+		</Style>
+		<Style Selector="Button:pointerover.titleRed /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="Red"/>
+			<Setter Property="TextBlock.Foreground" Value="WhiteSmoke"/>
+		</Style>
+		<Style Selector="Button.incorrect">
+			<Setter Property="Background" Value="DarkGray"/>
+			<Setter Property="Foreground" Value="WhiteSmoke"/>
+		</Style>
+		<Style Selector="Button:pointerover.incorrect /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="DarkGray"/>
+			<Setter Property="TextBlock.Foreground" Value="WhiteSmoke"/>
+		</Style>
+	</Window.Styles>
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20" Spacing="10">
+			<Button Content="B" Classes="titleRed" Width="55" Height="55" CornerRadius="10" FontSize="36" HorizontalContentAlignment="Center" FontWeight="DemiBold" Background="Red" Foreground="WhiteSmoke"/>
+			<Button Content="A" Classes="titleRed" Width="55" Height="55" CornerRadius="10" FontSize="36" HorizontalContentAlignment="Center" FontWeight="DemiBold" Background="Red" Foreground="WhiteSmoke"/>
+			<Button Content="D" Classes="titleRed" Width="55" Height="55" CornerRadius="10" FontSize="36" HorizontalContentAlignment="Center" FontWeight="DemiBold" Background="Red" Foreground="WhiteSmoke"/>
+			<Button Content="L" Classes="isHere" Width="55" Height="55" CornerRadius="10" FontSize="36" HorizontalContentAlignment="Center" FontWeight="DemiBold" Background="LimeGreen" Foreground="WhiteSmoke"/>
+			<Button Content="E" Classes="isHere" Width="55" Height="55" CornerRadius="10" FontSize="36" HorizontalContentAlignment="Center" FontWeight="DemiBold" Background="LimeGreen" Foreground="WhiteSmoke"/>
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical" Spacing="40">
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" Spacing="10">
+				<StackPanel Orientation="Horizontal" Spacing="10">
+					<Button Name="11" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="12" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="13" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="14" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="15" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="10">
+					<Button Name="21" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="22" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="23" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="24" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="25" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="10">
+					<Button Name="31" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="32" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="33" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="34" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="35" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="10">
+					<Button Name="41" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="42" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="43" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="44" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="45" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="10">
+					<Button Name="51" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="52" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="53" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="54" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="55" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="10">
+					<Button Name="61" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="62" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="63" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="64" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+					<Button Name="65" Width="50" Height="50" CornerRadius="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="30"/>
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="5">
+				<StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
+					<Button Name="q" Content="Q" Command="{Binding KeyboardButton}" CommandParameter="Q" HotKey="Q"/>
+					<Button Name="w" Content="W" Command="{Binding KeyboardButton}" CommandParameter="W" HotKey="W"/>
+					<Button Name="e" Content="E" Command="{Binding KeyboardButton}" CommandParameter="E" HotKey="E"/>
+					<Button Name="r" Content="R" Command="{Binding KeyboardButton}" CommandParameter="R" HotKey="R"/>
+					<Button Name="t" Content="T" Command="{Binding KeyboardButton}" CommandParameter="T" HotKey="T"/>
+					<Button Name="y" Content="Y" Command="{Binding KeyboardButton}" CommandParameter="Y" HotKey="Y"/>
+					<Button Name="u" Content="U" Command="{Binding KeyboardButton}" CommandParameter="U" HotKey="U"/>
+					<Button Name="i" Content="I" Command="{Binding KeyboardButton}" CommandParameter="I" HotKey="I"/>
+					<Button Name="o" Content="O" Command="{Binding KeyboardButton}" CommandParameter="O" HotKey="O"/>
+					<Button Name="p" Content="P" Command="{Binding KeyboardButton}" CommandParameter="P" HotKey="P"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
+					<Button Name="a" Content="A" Command="{Binding KeyboardButton}" CommandParameter="A" HotKey="A"/>
+					<Button Name="s" Content="S" Command="{Binding KeyboardButton}" CommandParameter="S" HotKey="S"/>
+					<Button Name="d" Content="D" Command="{Binding KeyboardButton}" CommandParameter="D" HotKey="D"/>
+					<Button Name="f" Content="F" Command="{Binding KeyboardButton}" CommandParameter="F" HotKey="F"/>
+					<Button Name="g" Content="G" Command="{Binding KeyboardButton}" CommandParameter="G" HotKey="G"/>
+					<Button Name="h" Content="H" Command="{Binding KeyboardButton}" CommandParameter="H" HotKey="H"/>
+					<Button Name="j" Content="J" Command="{Binding KeyboardButton}" CommandParameter="J" HotKey="J"/>
+					<Button Name="k" Content="K" Command="{Binding KeyboardButton}" CommandParameter="K" HotKey="K"/>
+					<Button Name="l" Content="L" Command="{Binding KeyboardButton}" CommandParameter="L" HotKey="L"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
+					<Button Name="z" Content="Z" Command="{Binding KeyboardButton}" CommandParameter="Z" HotKey="Z"/>
+					<Button Name="x" Content="X" Command="{Binding KeyboardButton}" CommandParameter="X" HotKey="X"/>
+					<Button Name="c" Content="C" Command="{Binding KeyboardButton}" CommandParameter="C" HotKey="C"/>
+					<Button Name="v" Content="V" Command="{Binding KeyboardButton}" CommandParameter="V" HotKey="V"/>
+					<Button Name="b" Content="B" Command="{Binding KeyboardButton}" CommandParameter="B" HotKey="B"/>
+					<Button Name="n" Content="N" Command="{Binding KeyboardButton}" CommandParameter="N" HotKey="N"/>
+					<Button Name="m" Content="M" Command="{Binding KeyboardButton}" CommandParameter="M" HotKey="M"/>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+		
+		<StackPanel Orientation="Horizontal" Spacing="0" HorizontalAlignment="Center" Margin="30 30 30 10">
+			<TextBox Name="Input" Margin="10" Width="100" FontWeight="DemiBold" MaxLength="5"/>
+			<Button Name="Enter" Content="Enter" Height="35" Padding="8" HotKey="Enter"/>
+			<Button Name="Retry" Content="Go Again!" Height="35" Width="100" Padding="8" HorizontalContentAlignment="Center" IsVisible="False"/>
+		</StackPanel>
+		<TextBlock Name="Output" Foreground="Red" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	</StackPanel>
+
+</Window>
